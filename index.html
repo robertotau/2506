@@ -6,72 +6,67 @@
     <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="bootstrap-4.3.1-dist/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    #azul{
-      background-color: blue;
-      height: 120px;
-    }
-    #vermelho{
-      background-color:crimson;
-      height: 120px;
-    }
-    #preto{
-      background-color:#000;
-      height: 300px;
-    }
-    #amarelo{
-      background-color:yellow;
-      height: 300px;
-    }
-    #verde{
-      background-color:green;
-      height: 100px;
-    }
-    @media screen and (max-width: 576px){
-      #azul{
-        height: 60px;
-      }
-      #vermelho{
-        height: 45px;
-      }
-
-    }
-    </style>
-
-
 
 
     <title>Boostrap</title>
+    <style type="text/css">
+    div{
+      background-color: #ccc;
+      border: 1px solid #000;
+      min-height: 100px;
+
+    }
+    #rowConteudo{
+      min-height: 400px;
+    }
+    .flex-row{
+      flex: 1 0 auto;
+    }
+    </style>
   </head>
   <body>
-
     <div class="container-fluid">
-      <div class="row">
-        <div id="azul" class="col-sm-4 col-xs-12">
-          sssss
+      <div class="row justify-content-between">
+        <div class="col-3">
+          Coluna 1
 
         </div>
-        <div id="vermelho" class="col-sm-8 col-xs-12">
-          dddd
+        <div class="col-6">
+          Coluna 2
 
         </div>
+
       </div>
-      <div class="row">
-          <div id="preto" class="col-sm-10 col-xs-12">
-  
+      <div class="row" id="rowConteudo">
+        <div class="col-9 d-flex">
+          <div class="d-flex flex-column w-100">
+            <div>1</div>
+            <div class="flex-row">2</div>
+            <div>3</div>
           </div>
-          <div id="amarelo" class="col-sm-2 d-none  d-sm-block">
-  
+
+        </div>
+        <div class="col-3 d-flex">
+          <div class="d-flex flex-column w-100">
+            <div>
+             Primeiro
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div id="verde" class="col-12">
+          <div class="flex-row">
+            Segundo
+          </div>
 
         </div>
-
       </div>
+
     </div>
+    <div class="row">
+        <div class="col-12">
+          Rodapé
+
+        </div>
+
+      </div>
+
 
   </body>
 </html>
